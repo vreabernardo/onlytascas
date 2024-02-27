@@ -1,0 +1,121 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+input:focus {
+  outline: none;
+  border-color: #ff00ff;
+  box-shadow: 0 0 5px rgba(255, 0, 255, 0.5);
+}
+
+button {
+  padding: 15px 10px;
+  background-color: #ff00ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-family: "Vibur", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  animation: pulsate 0.11s ease-in-out infinite alternate;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #f09,
+    0 0 82px #f09, 0 0 92px #f09, 0 0 102px #f09, 0 0 151px #f09;
+}
+
+button:hover {
+  background-color: #ff99ff;
+}
+
+body {
+  background-color: #000000;
+  text-align: center; /* Align text in the body */
+}
+
+.info {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1.5;
+  border-radius: 10px;
+  padding: 2.5px;
+  text-align: center;
+}
+
+.header {
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align items vertically */
+  justify-content: center; /* Align items horizontally */
+}
+
+.header h1 {
+  margin: 0; /* Remove default margin */
+}
+
+h1 {
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #f09,
+    0 0 82px #f09, 0 0 92px #f09, 0 0 102px #f09, 0 0 151px #f09;
+}
+
+h1,
+h2 {
+  text-align: center;
+  font-weight: 400;
+  line-height: 1;
+  font-size: 18px;
+  font-family: "Vibur", sans-serif;
+}
+
+h1 {
+  font-size: 6.2rem;
+  animation: pulsate 0.11s ease-in-out infinite alternate;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+.container {
+  margin-top: 20vh;
+}
+
+@keyframes pulsate {
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #f09,
+      0 0 80px #f09, 0 0 90px #f09, 0 0 100px #f09, 0 0 150px #f09;
+  }
+
+  0% {
+    text-shadow: 0 0 4px #fff, 0 0 10px #fff, 0 0 18px #fff, 0 0 38px #f09,
+      0 0 73px #f09, 0 0 80px #f09, 0 0 94px #f09, 0 0 140px #f09;
+  }
+}
+
+.image {
+  transition: transform 0.5s ease-in-out;
+}
+
+.image:hover {
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
