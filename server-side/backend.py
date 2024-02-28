@@ -23,9 +23,9 @@ def makeMap():
     json_data = json.loads(request_data)
     print("Data received:", json_data)
     
-    # response_data = getPlaces(json_data['radius'], json_data['nplaces'], json_data['location'], json_data['food'])
-    
-    return [], 200
+    #response_data = getPlaces(json_data['radius'], json_data['nplaces'], json_data['location'], json_data['food'])
+    repsonse_data = {'places': [{'location': {'latitude': 38.708683, 'longitude': -9.147336899999999}, 'displayName': {'text': 'Musa da Bica', 'languageCode': 'en'}}, {'location': {'latitude': 38.7139252, 'longitude': -9.141045799999999}, 'displayName': {'text': 'The Beer Station', 'languageCode': 'en'}}, {'location': {'latitude': 38.716191599999995, 'longitude': -9.138308499999999}, 'displayName': {'text': 'The Queen Ale - Craft Beer Bar', 'languageCode': 'es'}}]}
+    return repsonse_data, 200
 
 
 def get_api_key():
@@ -35,9 +35,7 @@ def getPlaces(radius, nplaces, location, foodType):
     try:
         coordinates = get_coordinates(location)
     except:
-        print(location)
-        print("error: invalid location")
-        return []
+        return {"error": "invalid location"}
         
     latitude, longitude = coordinates
     textQuery = foodType
