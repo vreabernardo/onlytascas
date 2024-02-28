@@ -24,8 +24,8 @@ def makeMap():
     print("Data received:", json_data)
     
     #response_data = getPlaces(json_data['radius'], json_data['nplaces'], json_data['location'], json_data['food'])
-    repsonse_data = {'places': [{'location': {'latitude': 38.708683, 'longitude': -9.147336899999999}, 'displayName': {'text': 'Musa da Bica', 'languageCode': 'en'}}, {'location': {'latitude': 38.7139252, 'longitude': -9.141045799999999}, 'displayName': {'text': 'The Beer Station', 'languageCode': 'en'}}, {'location': {'latitude': 38.716191599999995, 'longitude': -9.138308499999999}, 'displayName': {'text': 'The Queen Ale - Craft Beer Bar', 'languageCode': 'es'}}]}
-    return repsonse_data, 200
+    response_data = {'places': [{'location': {'latitude': 38.716191599999995, 'longitude': -9.138308499999999}, 'googleMapsUri': 'https://maps.google.com/?cid=15249334754847528624', 'displayName': {'text': 'The Queen Ale - Craft Beer Bar', 'languageCode': 'es'}}, {'location': {'latitude': 38.709498499999995, 'longitude': -9.1318081}, 'googleMapsUri': 'https://maps.google.com/?cid=16161826482985014755', 'displayName': {'text': 'Crafty Corner', 'languageCode': 'en'}}, {'location': {'latitude': 38.7139252, 'longitude': -9.141045799999999}, 'googleMapsUri': 'https://maps.google.com/?cid=13711079965472434222', 'displayName': {'text': 'The Beer Station', 'languageCode': 'en'}}]}
+    return response_data, 200
 
 
 def get_api_key():
@@ -44,7 +44,7 @@ def getPlaces(radius, nplaces, location, foodType):
     headers = {
         "Content-Type": "application/json",
         "X-Goog-Api-Key": get_api_key(),
-        "X-Goog-FieldMask": "places.displayName,places.location"
+        "X-Goog-FieldMask": "places.displayName,places.location,places.googleMapsUri"
     }
     
     data = {

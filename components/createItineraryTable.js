@@ -4,10 +4,8 @@ export function createItineraryTable(data) {
         const row = table.insertRow();
         const cell1 = row.insertCell(0);
         const cell2 = row.insertCell(1);
-        const cell3 = row.insertCell(2);
         cell1.textContent = data.places[key].displayName.text;
-        cell2.textContent = data.places[key].location.latitude;
-        cell3.textContent = data.places[key].location.longitude;
+        cell2.innerHTML = `<button class="placeButton" onclick="window.open('${data.places[key].googleMapsUri}')">Go</button>`;
     }
     const formElement = document.querySelector('form');
     formElement.replaceWith(table);

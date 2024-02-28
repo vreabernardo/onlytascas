@@ -118,17 +118,35 @@ h2 {
     transform: rotate(360deg);
   }
 }
+
 table {
   border-collapse: collapse;
   width: 100%;
 }
+
 th,
 td {
-  border: 1px solid #dddddd;
+  border: 1px solid #ffffff;
   text-align: left;
-  padding: 8px;
-  color: #ffffff; /* Set font color to white */
+  padding: 12px;
+  color: #ffffff;
 }
+
 th {
-  background-color: #f2f2f2;
+  background-color: #000000;
+  font-weight: bold;
+}
+
+/* Alternate row background colors */
+tr:nth-child(even) {
+  background-color: #171717;
+}
+
+tr:nth-child(odd) {
+  background-color: #000000;
+}
+
+/* Highlight row on hover */
+tr:hover {
+  background-color: #ff99ff;
 }
