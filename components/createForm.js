@@ -1,8 +1,6 @@
 import { createInput } from './createInput.js';
 import { createButton } from './createButton.js';
 
-const MAP_ENDPOINT = "makeMap";
-
 export function createForm() {
     return new Promise((resolve, reject) => {
         // Create a form element
@@ -14,8 +12,10 @@ export function createForm() {
         // Create an input element for location
         const locationInput = createInput('text', 'location', 'Enter a location');
 
+        // Create an input element for radius (meters)
         const radiusInput = createInput('text', 'radius', 'Radius (meters)');
-
+        
+        // Create an input element for the number of places
         const numberOfPlaces = createInput('text', 'nplaces', 'Number of places');
 
         // Create a submit button
@@ -46,9 +46,13 @@ function handleFormSubmit(event, resolve, reject) {
 
     const data = Object.fromEntries(formData.entries());
 
+    // Check if the user has filled in both input fields
     if (data.food && data.location) {
+        // If the user has filled in both input fields, resolve the promise
         resolve(data);
     } else {
+        // If the user has not filled in both input fields, reject the promise
+        alert('Please fill in both input fields');
         reject('Please fill in both input fields');
     }
 }
