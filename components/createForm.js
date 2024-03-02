@@ -1,6 +1,9 @@
 import { createInput } from './createInput.js';
 import { createButton } from './createButton.js';
 
+// Purpose: create a form element and a submit button.
+// Return: a promise that resolves with the form data when the form is submitted.
+
 export function createForm() {
     return new Promise((resolve, reject) => {
         // Create a form element

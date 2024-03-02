@@ -7,8 +7,6 @@ from geopy.geocoders import Nominatim
 import requests
 
 
-# api key os.getenv('API_KEY')
-
 def configure():
     load_dotenv()
 
@@ -18,14 +16,14 @@ CORS(app)
 
 @app.route('/makeMap', methods=['POST'])
 def makeMap():
-    print("Request received")
+
     request_data = request.get_data()
     json_data = json.loads(request_data)
+
     print("Data received:", json_data)
     
     response_data = getPlaces(json_data['radius'], json_data['nplaces'], json_data['location'], json_data['food'])
     
-    #response_data = {'places': [{'location': {'latitude': 38.716191599999995, 'longitude': -9.138308499999999}, 'googleMapsUri': 'https://maps.google.com/?cid=15249334754847528624', 'displayName': {'text': 'The Queen Ale - Craft Beer Bar', 'languageCode': 'es'}}, {'location': {'latitude': 38.709498499999995, 'longitude': -9.1318081}, 'googleMapsUri': 'https://maps.google.com/?cid=16161826482985014755', 'displayName': {'text': 'Crafty Corner', 'languageCode': 'en'}}, {'location': {'latitude': 38.7139252, 'longitude': -9.141045799999999}, 'googleMapsUri': 'https://maps.google.com/?cid=13711079965472434222', 'displayName': {'text': 'The Beer Station', 'languageCode': 'en'}}]}
     new_json = []
     for place in response_data['places']:
         new_json.append([{"lat":place['location']['latitude'], "lng":place['location']['longitude']}, place['displayName']['text'], place['googleMapsUri']])

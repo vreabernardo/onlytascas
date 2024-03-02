@@ -2,7 +2,7 @@ import {getpolyline} from './getPolyLine.js';
 
 let map;
 
-export async function initMap(data) {
+export async function initMap(data, API_KEY) {
   
   const { Map } = await google.maps.importLibrary("maps");
   
@@ -23,7 +23,7 @@ export async function initMap(data) {
 
 
 
-  getpolyline(firstPlace, finalPlace, waypoints)
+  getpolyline(firstPlace, finalPlace, waypoints, API_KEY)
       .then(result => {
           
           let route_encoded = result["routes"][0]["polyline"]["encodedPolyline"];

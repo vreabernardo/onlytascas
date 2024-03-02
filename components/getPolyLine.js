@@ -1,7 +1,5 @@
-export function getpolyline(firstplace, finalplace, waypoints) {
-    const apiKey = "AIzaSyD5HY1k-UIZaVh1e5HVS180wSdQ5OWMBF0";
+export function getpolyline(firstplace, finalplace, waypoints, API_KEY) {
     
-
     const data = {
         origin: {
             location: {
@@ -29,7 +27,7 @@ export function getpolyline(firstplace, finalplace, waypoints) {
     const url = 'https://routes.googleapis.com/directions/v2:computeRoutes';
     const headers = {
         'Content-Type': 'application/json',
-        'X-Goog-Api-Key': apiKey,
+        'X-Goog-Api-Key': API_KEY,
         'X-Goog-FieldMask': 'routes.duration,routes.distanceMeters,routes.polyline.encodedPolyline'
     };
 
