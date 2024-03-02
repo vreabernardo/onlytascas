@@ -7,3 +7,6 @@ https://github.com/vreabernardo/onlytascas/assets/45080358/c0309272-b39f-4637-a2
 OnlyTascas is a versatile web application designed to enrich your culinary adventures anywhere in the world, inspired by the traditional Portuguese "Rali de Tascas" or "Taverns Rali." Whether you're in Portugal or beyond, OnlyTascas helps you create personalized food tours centered around a specific dish, guiding you to the best places to taste it while exploring the unique flavors of different neighborhoods in a city.
 
 
+## Google API Integration:
+
+To run this application, you'll need to obtain a Google API key, as OnlyTascas utilizes the Google Routes and Google Places APIs for location-based services. Visit the Google Cloud Platform website to get started with obtaining your API key:[Google Cloud Platform](https://cloud.google.com/?hl=en)
