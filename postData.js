@@ -1,3 +1,4 @@
+// post data to backend
 export async function postData(url, data) {
   try {
       const response = await fetch(url, {
