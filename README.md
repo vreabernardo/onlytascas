@@ -4,7 +4,7 @@ https://github.com/vreabernardo/onlytascas/assets/45080358/c0309272-b39f-4637-a2
 
 ## Description: 
 
-OnlyTascas is a versatile web application designed to enrich your culinary adventures anywhere in the world, inspired by the traditional Portuguese "Rali de Tascas" or "Taverns Rali." Whether you're in Portugal or beyond, OnlyTascas helps you create personalized food tours centered around a specific dish, guiding you to the best places to taste it while exploring the unique flavors of different neighborhoods in a city.
+Inspired by the traditional Portuguese "Rali de Tascas", OnlyTascas is an app that crafts custom food tours based on your chosen dish, location, number of places, and radius. It maps out the best spots to taste that dish within the specified radius, optimizing your route for maximum culinary exploration and city sightseeing. 
 
 
 ## Google API Integration:
