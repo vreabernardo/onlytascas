@@ -4,7 +4,7 @@ import { createItineraryTable } from './components/createItineraryTable.js';
 import { initMap } from './components/createMapRoute.js';
 
 const url = 'http://127.0.0.1:5000/makeMap';
-const API_KEY = "AIzaSyD5HY1k-UIZaVh1e5HVS180wSdQ5OWMBF0";
+const API_KEY = "GOOGLEAPIKEY";
 
 function main() {
     // initialize the library from google maps
